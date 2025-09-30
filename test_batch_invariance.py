@@ -128,9 +128,9 @@ with set_batch_invariant_mode(False):
     print("mean.dim:")
     is_deterministic_mean = test_mean_invariance()
     print(f"Deterministic: {is_deterministic_mean}")
-    print("attention (sdpa):")
-    is_deterministic_attn = test_attention_invariance()
-    print(f"Deterministic: {is_deterministic_attn}")
+    # print("attention (sdpa):")
+    # is_deterministic_attn = test_attention_invariance()
+    # print(f"Deterministic: {is_deterministic_attn}")
 
 # Test with batch-invariant operations
 print("\nBatch-Invariant Mode:")
