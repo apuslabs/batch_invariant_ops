@@ -117,6 +117,7 @@ def test_attention_invariance():
 # Test with standard PyTorch (likely to show differences)
 print("Standard PyTorch:")
 with set_batch_invariant_mode(False):
+    print("mm:")
     is_deterministic = test_mm_invariance()
     print(f"Deterministic: {is_deterministic}")
     print("addmm:")
@@ -135,6 +136,7 @@ with set_batch_invariant_mode(False):
 # Test with batch-invariant operations
 print("\nBatch-Invariant Mode:")
 with set_batch_invariant_mode(True):
+    print("mm:")
     is_deterministic = test_mm_invariance()
     print(f"Deterministic: {is_deterministic}")
     print("addmm:")
